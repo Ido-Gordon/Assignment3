@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ido Jungle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="jungle-header">
+        <h1>🌴 הג'ונגל של עידו </h1>
+        
+        <p class="keyboard-hint">
+            💡בחר חיה ותשמע אותה,  וגם ניתן ללחוץ על מספרי המקשים <b>1-7</b> במקלדת כדי לנגן במהירות את קולות החיות המתאימות, לפי המספר שמוצג על כל חיה.
+        </p>
+        
+         <!--Jungle background sound-->
+        <button id="play-music-btn">הפעל מוזיקת רקע</button>
+        <button id="mute-btn" style="display:none;">השתק מוזיקת רקע</button>
+        <audio id="background-audio" src="sound/jungle-sound.mp3" loop style="display:none;"></audio>
+
+          
+         <!--The 7 selected animals include a picture and appropriate sound-->
+        </div>
+        <div id="gallery" class="jungle-gallery">
+            <div class="animal-box">
+                <span class="animal-key">1</span>
+                <img src="pic/Elephant.jpeg" alt="Elephant" data-sound="sound/Elephant-sound.mp3" class="jungle-animal">
+            </div>
+            <div class="animal-box">
+                <span class="animal-key">2</span>
+                <img src="pic/monkey.jpeg" alt="monkey" data-sound="sound/monkey-sound.mp3" class="jungle-animal">
+            </div>
+            <div class="animal-box">
+                <span class="animal-key">3</span>
+                <img src="pic/frog.jpeg" alt="frog" data-sound="sound/frog-sound.mp3" class="jungle-animal">
+            </div>
+            <div class="animal-box">
+                <span class="animal-key">4</span>
+                <img src="pic/dolphin.jpeg" alt="dolphin" data-sound="sound/dolphin-sound.mp3" class="jungle-animal">
+            </div>
+            <div class="animal-box">
+                <span class="animal-key">5</span>
+                <img src="pic/sheep.jpeg" alt="sheep" data-sound="sound/sheep-sound.mp3" class="jungle-animal">
+            </div>
+            <div class="animal-box">
+                <span class="animal-key">6</span>
+                <img src="pic/lion.jpg" alt="lion" data-sound="sound/lion-sound.mp3" class="jungle-animal">
+            </div>
+            <div class="animal-box">
+                <span class="animal-key">7</span>
+                <img src="pic/cat.jpeg" alt="cat" data-sound="sound/cat-sound.mp3" class="jungle-animal">
+            </div>
+        </div>
+        
+
+
+        <!--// --- אלמנט שלא למדנו בכיתה: dialog ---
+        // הוא אלמנט  שמאפשר להציג חלון קופץ  בעמוד.
+        // בעזרת showModal() פותחים אותו, ו-close() סוגרים אותו.
+        // זה נותן חוויית משתמש מגניבה 
+        -->
+        </div>
+        <button id="info-btn">מידע על האתר</button>
+    <dialog id="info-dialog">
+    <h2>ברוך הבא לג'ונגל של עידו!</h2>
+    <p>אתר אינטראקטיבי המנגן קולות של חיות. נבנה בפרויקט קורס WEB.</p>
+    <button id="close-dialog">סגור</button>
+    </dialog>
+    <!--Jungle background sound-->
+    <audio id="background-audio" src="sound/jungle-sound.mp3" autoplay loop></audio>
+        <script src="javaS.js"></script>
+</body>
+</html>

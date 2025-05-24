@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #b3ffab 0%, #12fff7 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Varela Round', Arial, sans-serif;
+    direction: rtl;
+  }
+  
+  .jungle-header {
+    text-align: center;
+    padding-top: 40px;
+    color: #f9ffdb;
+    text-shadow: 2px 4px 10px #437027, 0 0 8px #0a4216;
+    background: rgba(10, 66, 22, 0.48);
+    margin-bottom: 20px;
+    border-bottom: 4px solid #6ad672;
+  }
+  
+  .jungle-header h1 {
+    font-size: 3.2em;
+    letter-spacing: 6px;
+    margin: 0;
+  }
+  
+  .jungle-header p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+  
+  .jungle-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+  }
+  
+  .jungle-animal {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 25% 50% 38% 62% / 60% 35% 65% 40%;
+    border: 5px solid #44c147;
+    box-shadow: 0 6px 26px 0 #267a34a0, 0 0 0 0 #fff;
+    background: rgba(255,255,255,0.25);
+    transition:
+      box-shadow 0.2s,
+      transform 0.2s,
+      filter 0.3s,
+      border-radius 0.6s cubic-bezier(0.17,0.67,0.54,2.5);
+    cursor: pointer;
+    filter: brightness(1.1) saturate(1.2);
+    animation: float 3.5s ease-in-out infinite alternate;
+  }
+  
+  .jungle-animal:hover {
+    transform: scale(1.11) rotate(-3deg);
+    box-shadow: 0 2px 36px 0 #23e84a, 0 0 30px 6px #faffdb;
+    filter: brightness(1.3) drop-shadow(0 0 20px #95ffb0);
+    border-radius: 48% 58% 44% 66% / 66% 38% 68% 38%;
+    z-index: 2;
+  }
+  
+  .jungle-animal.clicked {
+    animation: bounce 0.6s cubic-bezier(0.27,1.47,0.37,0.99);
+    box-shadow: 0 0 40px 10px #ffeb3b, 0 0 80px 10px #2fdf46;
+    border: 7px solid #ebd834;
+    filter: hue-rotate(25deg) brightness(1.4);
+  }
+  
+  @keyframes float {
+    0%   { transform: translateY(0px) scale(1);}
+    100% { transform: translateY(-18px) scale(1.07);}
+  }
+  
+  @keyframes bounce {
+    0%   { transform: scale(1) rotate(0);}
+    30%  { transform: scale(1.3) rotate(4deg);}
+    55%  { transform: scale(0.93) rotate(-2deg);}
+    75%  { transform: scale(1.07) rotate(1deg);}
+    100% { transform: scale(1) rotate(0);}
+  }
+  
+  @media (max-width: 800px) {
+    .jungle-animal { width: 110px; height: 110px; }
+    .jungle-header h1 { font-size: 2em;}
+    .jungle-gallery { gap: 14px; }
+  }
+  .jungle-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+  }
+  
+  .jungle-animal {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 25% 50% 38% 62% / 60% 35% 65% 40%;
+    border: 5px solid #44c147;
+    margin: 8px;
+    box-shadow: 0 6px 26px 0 #267a34a0;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .jungle-animal:hover {
+    transform: scale(1.12);
+    box-shadow: 0 2px 36px 0 #23e84a;
+  }
+  
+  /* --- כאן ה-media query --- */
+  @media (max-width: 900px) {
+    .jungle-animal {
+      width: 120px;
+      height: 120px;
+    }
+    .jungle-gallery {
+      gap: 16px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .jungle-gallery {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .jungle-animal {
+      width: 80vw;
+      height: 80vw;
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+  
+  #play-music-btn, #mute-btn {
+    background: linear-gradient(135deg, #44c147 10%, #63bbd5 90%);
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+    padding: 14px 32px;
+    border-radius: 32px;
+    margin: 18px 10px 0 10px;
+    box-shadow: 0 2px 10px #15693040, 0 0 0 0 #fff;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 
+      background 0.35s,
+      transform 0.13s,
+      box-shadow 0.22s,
+      color 0.2s;
+  }
+  
+  #play-music-btn:hover, #mute-btn:hover {
+    background: linear-gradient(135deg, #6ad672 10%, #48e4ad 90%);
+    color: #223;
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 4px 20px 0 #4ce17460, 0 0 30px 2px #caffdb50;
+  }
+  
+  #play-music-btn:active, #mute-btn:active {
+    transform: scale(0.97) translateY(1px);
+    background: linear-gradient(135deg, #42ae76 10%, #31acba 90%);
+    color: #fff;
+  }
+  .animal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .animal-key {
+    font-size: 1.3em;
+    font-weight: bold;
+    background: #44c147c2;
+    color: #fff;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px #15693038;
+    border: 2px solid #32d78890;
+    margin-top: 3px;
+    letter-spacing: 1px;
+  }
+  
